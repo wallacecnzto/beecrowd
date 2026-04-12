@@ -1,8 +1,12 @@
-valores = input().split(",")
+valores_str = input().split()
+valores_int = []
 
-lista_de_inteiros = []
+for valor in valores_str:
+    valores_int.append(int(valor))
 
-for valor in valores:
-    lista_de_inteiros.append(int(valor))
+A, B, C, D = valores_int
 
-print(valores)
+if B > C and D > A and (C + D) > (A + B) and C > 0 and D > 0 and A % 2 == 0:
+    print("Valores aceitos")
+else:
+    print("Valores nao aceitos")
